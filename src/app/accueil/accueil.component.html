@@ -1,6 +1,25 @@
-<h1 (click)="onClic()">Le titre de ma ST : {{titre}}</h1>
+<div class="disposition">
+    <input type="text" [(ngModel)]="urlImageSaisie">
+    <div (click)="onClicAjouterImage()" class="btnAjouter">Ajouter une image</div>
+</div>
 
-<h2>Compteur : {{compteur}}</h2>
+<div class="categories">
 
-<button (click)="increment()">Incrémenter compteur</button>
+    @for(categorie of categories; track $index) {
 
+
+    <div class="categorie">
+        <div class="en-tete">
+            {{ categorie.titre }}
+        </div>
+
+
+        @for(image of categorie.images; track $index){
+        <div class="image"><img src="{{ image }}"></div>
+        <div class="image">Mon image B</div>
+        }
+    </div>
+
+    }
+
+</div>

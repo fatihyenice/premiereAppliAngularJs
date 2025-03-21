@@ -1,0 +1,77 @@
+.categories {
+
+    img {
+        max-width: 100%;
+    }
+
+    :nth-child(1) .en-tete {
+        background-color: red;
+    }
+    
+    :nth-child(2) .en-tete {
+        background-color: orange;
+    }
+
+    :nth-child(3) .en-tete {
+        background-color: purple;
+    }
+
+    :nth-child(4) .en-tete {
+        background-color: pink;
+    }
+
+    :nth-child(5) .en-tete {
+        background-color: green;
+    }
+
+    .categorie { 
+        display: flex;
+        height: 100px; 
+        width: 100%; 
+        align-items: center; 
+        padding: 10px;
+
+        .image, .en-tete {
+            width: 100px;
+            height: 100px; 
+            border: 1px solid #fff;  
+        }
+
+        .en-tete { 
+            display: flex;
+            align-items: center;
+            justify-content: center;  
+            font-weight: bold;
+            font-size: 20px;
+        }
+    } 
+}
+
+.disposition {
+    position: absolute;
+    right: 0;
+    color: #fff;
+    margin-top: 100px;
+    margin-right: 100px;
+}
+
+input[type="text"]{
+    padding: 7px;
+    border: 1px solid #dedede;
+    border-radius: 4px;
+    outline: none;
+    width: 300px;
+}
+
+.btnAjouter {
+    cursor: pointer;
+    background: green;
+    display: inline;
+    padding: 10px; 
+    margin-left: 10px;
+    border-radius: 5px;
+    user-select: none;
+    &:hover {
+        background: rgba(0, 128, 0, 0.687);
+    }
+}
