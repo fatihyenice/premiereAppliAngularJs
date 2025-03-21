@@ -51,6 +51,8 @@ export class AccueilComponent {
     if(enregistrement == null){
       localStorage.setItem("categories", JSON.stringify(categoriesParDefaut))
     }
+
+    this.categories = JSON.parse(localStorage.getItem("categories")!); // Le point d'exclamation à la fin veut dire ne cherche pas à typer, ce que je t'ai envoyé est sûr
   
 }
 
