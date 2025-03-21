@@ -21,10 +21,10 @@ export class AccueilComponent {
 
     // Quand les composants seront chargés
     ngOnInit(){
-      console.log('coucou')
-    }
+      const enregistrement = localStorage.getItem("categories");
+
    
-    categories: Categorie[] = [
+    const categoriesParDefaut: Categorie[] = [
       {
         titre: 'A',
         images: [],
@@ -45,10 +45,20 @@ export class AccueilComponent {
         titre: 'E',
         images: [],
       },
-    ]
+    ];
+
+    
+    if(enregistrement == null){
+      localStorage.setItem("categories", JSON.stringify(categoriesParDefaut))
+    }
+  
+}
+
+    categories: Categorie[] = [];
 
     onClicAjouterImage() {
        this.categories[0].images.push(this.urlImageSaisie)
        this.urlImageSaisie = ""
     }
+ 
 }
